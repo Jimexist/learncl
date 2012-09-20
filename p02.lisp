@@ -1,0 +1,6 @@
+(defun my-but-last (lst)
+  (labels ((nxt (ele1 ele2 lst)
+                (if (null lst)
+                  (list ele1 ele2)
+                  (nxt ele2 (car lst) (cdr lst)))))
+    (nxt nil nil lst))) 
